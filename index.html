@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button onclick="changebgc()">Change Theme</button>
+
+    <h1 id="myH1"></h1>
+    <button onclick="subtractNum()">-</button>
+    <button onclick="addNum()">+</button>
+
+
+
+    <h1 id="displayNum">0</h1>
+
+
+
+
+    <script>
+
+    let num = document.getElementById("myH1");
+    num.innerHTML = 0;
+    console.log(num.innerHTML);
+    
+    let theH1 = document.getElementById("myH1").innerHTML;
+
+     
+    function addNum(){
+        num.innerHTML++
+        document.getElementById("myH1").innerHTML = num.innerHTML;
+    }  
+
+
+      
+    function subtractNum(){
+        num.innerHTML--;
+        document.getElementById("myH1").innerHTML = num.innerHTML;
+    } 
+    
+
+        
+    let backGroundColor = document.body.style.backgroundColor = "White"
+
+    function changebgc(){
+        document.body.style.backgroundColor == "white" ? document.body.style.backgroundColor = "black" : document.body.style.backgroundColor = "white"
+    }
+
+
+    let number = 0;
+    let displayNum = document.getElementById('displayNum');
+
+    function increaseNumber(){
+        number++;
+        displayNum.innerHTML = number;
+    }
+
+    setInterval(() => {
+        increaseNumber()
+    }, 2000);
+
+    
+
+    </script>
+</body>
+</html>
